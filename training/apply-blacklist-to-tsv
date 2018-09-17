@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+# Remove tuv entries in tsv-file where the original (first entry) matches one of
+# the lines in blacklist-file. Also trims leading/trailing whitespace
+# (which google will do anyway if we don't)
+# ./apply-blacklist-to-tsv ./blacklist.txt data/fr.tmx > data/fr-clean.tmx`
+
+usage="Usage: $0 blacklist-file tsv-file";
+
+if [ ! -f "$1" ] || [ ! -f "$2" ]; then echo $usage; exit; fi;
+
+blacklist_array=$(cat "$1" | jq '. | split("\n")' -Rsc)
+
+# you can remove that final "not" to check the strings we're removing
+cat $2 | xq --xml-output '.tmx.body.tu |= map(select(.tuv[0].seg as $seg | '"$blacklist_array"' | index($seg) | not))'
+

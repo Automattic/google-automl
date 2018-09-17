@@ -1,0 +1,28 @@
+F j
+Y
+F Y
+M Y
+M A
+l F j, Y
+M d, Y
+d M Y
+j F, Y H:i
+D, M j, Y
+M j Y
+D
+L
+M
+M
+J
+V
+S
+M j, Y @ G:i
+M j, Y
+l jS \o\f F Y, h:ia
+jS F, Y
+jS F Y
+dddd, D MMMM YYYY LT
+D MMMM YYYY LT
+D MMMM YYYY
+DD/MM/YYYY
+HH:mm
