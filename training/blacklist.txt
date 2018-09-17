@@ -27,3 +27,10 @@ D MMMM YYYY
 DD/MM/YYYY
 HH:mm
 the
+to
+m/Y
+S
+M
+T
+W
+F
